@@ -1,9 +1,12 @@
-package de.christianoette.course;
+package de.oette.course;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
+@SuppressWarnings("SpellCheckingInspection")
 @SpringBootApplication
+@ComponentScan(basePackages = "de.oette.course.A01")
 public class SpringAndHibernateApplication {
 
 	public static void main(String[] args) {
