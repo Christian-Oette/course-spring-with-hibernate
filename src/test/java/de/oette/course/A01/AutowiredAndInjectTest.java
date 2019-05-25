@@ -1,16 +1,13 @@
 package de.oette.course.A01;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest
-public class AutowiredAndInjectTest {
+class AutowiredAndInjectTest {
 
-	@Test
-	public void testAnnotations() {
+    @Test
+    void testAnnotations() {
 		// Start here!
 	}
 
