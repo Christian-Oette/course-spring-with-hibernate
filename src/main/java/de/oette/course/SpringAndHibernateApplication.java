@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SuppressWarnings("SpellCheckingInspection")
 @SpringBootApplication
-@ComponentScan(basePackages = "de.oette.course.B05")
+@ComponentScan(basePackages = "de.oette.course.B06")
 public class SpringAndHibernateApplication {
 
 	public static void main(String[] args) {
