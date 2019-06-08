@@ -13,7 +13,9 @@ class ApplicationContextTest {
 
         TestContext bean = context.getBean(TestContext.class);
         System.out.println(bean);
-        System.out.println(bean);
+
+        TestContext bean2 = context.getBean(TestContext.class);
+        System.out.println(bean2);
     }
 
     private static class TestContext {

@@ -1,0 +1,1 @@
+Add Subclass in this package to test component scan!
