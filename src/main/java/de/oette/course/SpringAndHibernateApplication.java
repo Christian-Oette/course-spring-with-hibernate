@@ -2,11 +2,13 @@ package de.oette.course;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 
 @SuppressWarnings("SpellCheckingInspection")
 @SpringBootApplication
-@ComponentScan(basePackages = "de.oette.course.C01")
+@ComponentScan(basePackages = "de.oette.course.C02")
+@EntityScan(basePackages = "de.oette.course.C02")
 public class SpringAndHibernateApplication {
 
 	public static void main(String[] args) {
