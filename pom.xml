@@ -20,6 +20,7 @@
 		<javax.inject.version>1</javax.inject.version>
 		<reflections.version>0.9.10</reflections.version>
 		<assertj.version>3.12.2</assertj.version>
+		<commons-lang3.version>3.0</commons-lang3.version>
 	</properties>
 
 	<dependencies>
@@ -62,6 +63,12 @@
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
 			<version>${javax.inject.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang3.version}</version>
 		</dependency>
 
 		<dependency>
