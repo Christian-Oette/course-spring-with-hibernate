@@ -1,9 +1,15 @@
 package de.oette.course.C04;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-public class FavouriteColorTest {
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+
+class FavouriteColorTest {
     private static final String LIST_URL = "http://localhost:8080/list-colors/";
     private static final String STORE_URL = "http://localhost:8080/store-color";
 
