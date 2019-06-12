@@ -61,25 +61,14 @@
 			<div class="gtco-container">
 				<div class="row row-pb-md">
 
-					<div class="col-md-4 col-sm-4 service-wrap">
-						<div class="service">
-							<h3 th:text="${cardData.title}">Lorem</h3>
-							<p th:text="${cardData.text}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+					<div th:each="item : ${cardData}">
+						<div class="col-md-4 col-sm-4 service-wrap">
+							<div class="service">
+								<h3 th:text="${item.title}">Lorem</h3>
+								<p th:text="${item.text}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+							</div>
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-4 service-wrap">
-						<div class="service">
-							<h3>Ipsum</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4 service-wrap">
-						<div class="service">
-							<h3>Dolor</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-						</div>
-					</div>
-
 				</div>
 			</div>
 		</div>
