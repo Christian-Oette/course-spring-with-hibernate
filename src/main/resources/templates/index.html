@@ -22,7 +22,7 @@
 	
 	<div id="page">
 
-		<nav class="gtco-nav" role="navigation">
+		<nav th:replace="fragments/navigation :: nav" class="gtco-nav" role="navigation">
 			<div class="gtco-container">
 				
 				<div class="row">
@@ -37,7 +37,7 @@
 			</div>
 		</nav>
 
-		<header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner">
+		<header th:replace="fragments/header :: site-header" id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner">
 			<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0 text-left">
