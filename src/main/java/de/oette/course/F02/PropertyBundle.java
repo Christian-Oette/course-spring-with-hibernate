@@ -1,4 +1,4 @@
-package de.oette.course.F01;
+package de.oette.course.F02;
 
 import org.springframework.stereotype.Component;
 
