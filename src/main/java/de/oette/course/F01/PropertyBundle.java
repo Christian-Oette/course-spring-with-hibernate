@@ -1,6 +1,5 @@
 package de.oette.course.F01;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
