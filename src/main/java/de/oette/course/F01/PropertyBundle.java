@@ -4,7 +4,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * property.demo.inject=Example of injection
- * property.demo.inject2=99
  * property.demo.environment-var=${param}
  * property.demo.subclass.value1=value1
  * property.demo.subclass.value2=value2
