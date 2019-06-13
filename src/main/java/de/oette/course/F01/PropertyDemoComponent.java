@@ -5,8 +5,8 @@ import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 /**
- * property.demo.inject=Example of injection
- * property.demo.environment-var=${param}
+ * property.demo.inject
+ * property.demo.environment-var
  */
 @Component
 public class PropertyDemoComponent {
