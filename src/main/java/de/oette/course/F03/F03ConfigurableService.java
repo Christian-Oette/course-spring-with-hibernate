@@ -3,7 +3,6 @@ package de.oette.course.F03;
 import org.springframework.stereotype.Component;
 
 @SuppressWarnings("FieldCanBeLocal")
-@Component
 public class F03ConfigurableService {
 
     private int timeoutInMs;
