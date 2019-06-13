@@ -1,21 +1,15 @@
 package de.oette.course.F03;
 
-import org.springframework.stereotype.Component;
-
 @SuppressWarnings("FieldCanBeLocal")
 public class F03ConfigurableService {
 
     private int timeoutInMs;
     private boolean isDebug;
 
-    public F03ConfigurableService() {
-        System.out.println("F03 configurable service created.");
-    }
-
-
-    public F03ConfigurableService(int timeoutInMs, boolean isDebug) {
+    private F03ConfigurableService(int timeoutInMs, boolean isDebug) {
         this.timeoutInMs = timeoutInMs;
         this.isDebug = isDebug;
+        System.out.println("F03 configurable service created.");
     }
 
     public static class Builder {
