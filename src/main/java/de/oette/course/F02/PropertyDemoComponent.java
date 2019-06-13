@@ -1,6 +1,5 @@
 package de.oette.course.F02;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
@@ -12,18 +11,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class PropertyDemoComponent {
 
-    private final String property1;
-    private final String property2;
+    private final PropertyBundle propertyBundle;
 
-    public PropertyDemoComponent(@Value("${property.demo.inject}") String property1,
-                                 @Value("${property.demo.environment-var}") String property2) {
-        this.property1 = property1;
-        this.property2 = property2;
+    public PropertyDemoComponent(PropertyBundle propertyBundle) {
+        this.propertyBundle = propertyBundle;
     }
 
     @EventListener(ApplicationReadyEvent.class)
     public void onStartup() {
-        System.out.println(property1);
-        System.out.println(property2);
+        System.out.println(propertyBundle.getInject());
+        System.out.println(propertyBundle.getSubCategory().getValue1());
+        System.out.println(propertyBundle.getSubCategory().getValue2());
     }
 }
