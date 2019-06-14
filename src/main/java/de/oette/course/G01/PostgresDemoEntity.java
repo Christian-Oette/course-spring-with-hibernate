@@ -3,7 +3,7 @@ package de.oette.course.G01;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "postgres_demo2")
+@Table(name = "postgres_demo")
 public class PostgresDemoEntity {
 
     @Id
