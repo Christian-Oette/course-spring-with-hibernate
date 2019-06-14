@@ -1,8 +1,7 @@
-package de.oette.commons.util;
+package de.oette.course.G02;
 
-import de.oette.commons.hibernate.ExtendedPostgresSQL9Dialect;
-import org.apache.commons.io.FilenameUtils;
 import org.hibernate.boot.SchemaAutoTooling;
+import org.hibernate.dialect.PostgreSQL95Dialect;
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider;
@@ -24,17 +23,18 @@ import static org.hibernate.cfg.AvailableSettings.*;
  * <p>
  * Idea taken from <a href="http://stackoverflow.com/questions/27314165/generate-ddl-script-at-maven-build-with-hibernate4-jpa-2-1"/>
  */
-public class JpaSchemaUtil {
+public class DDLExporter {
 
 	private static final String SCHEMA_FILE_NAME = "schema.sql";
-	private static final String SCHEMA_FILE_PATH = "./app/src/main/resources/generated/ddl";
+	private static final String SCHEMA_FILE_PATH = "./generated/ddl";
+	public static final String PACKAGE = "de.oette.course";
 
 	public static void main(String[] args) {
-		new JpaSchemaUtil().execute();
+		new DDLExporter().execute();
 	}
 
 	public void execute() {
-		String path = FilenameUtils.concat(SCHEMA_FILE_PATH, SCHEMA_FILE_NAME);
+		String path = SCHEMA_FILE_PATH + SCHEMA_FILE_NAME;
 
 		// Remove file if exists otherwise schema will be appended to existing file
 		new File(path).delete();
@@ -58,7 +58,7 @@ public class JpaSchemaUtil {
 	private Properties createHibernateProperties() {
 		Properties hibernateProperties = new Properties();
 		hibernateProperties.put(FORMAT_SQL, "true");
-		hibernateProperties.put(DIALECT, ExtendedPostgresSQL9Dialect.class.getName());
+		hibernateProperties.put(DIALECT, PostgreSQL95Dialect.class.getName());
 		hibernateProperties.put(HBM2DDL_AUTO, SchemaAutoTooling.CREATE.name().toLowerCase());
 		return hibernateProperties;
 	}
@@ -76,6 +76,6 @@ public class JpaSchemaUtil {
 	private List<String> getEntityClassNames() {
 		ClassPathScanningCandidateComponentProvider provider = new ClassPathScanningCandidateComponentProvider(false);
 		provider.addIncludeFilter(new AnnotationTypeFilter(Entity.class));
-		return provider.findCandidateComponents("de.oette").stream().map(BeanDefinition::getBeanClassName).collect(toList());
+		return provider.findCandidateComponents(PACKAGE).stream().map(BeanDefinition::getBeanClassName).collect(toList());
 	}
 }

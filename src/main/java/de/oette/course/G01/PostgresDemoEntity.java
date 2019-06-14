@@ -3,8 +3,8 @@ package de.oette.course.G01;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "derby_demo")
-public class DerbyDemoEntity {
+@Table(name = "postgres_demo2")
+public class PostgresDemoEntity {
 
     @Id
     private long id = 1;
