@@ -10,7 +10,7 @@ import javax.transaction.Transactional;
 import java.util.Optional;
 
 @Component
-public class DerbyDemoController {
+public class PostgresDemoComponent {
 
     @PersistenceContext
     private EntityManager entityManager;
