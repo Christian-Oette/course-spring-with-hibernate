@@ -39,6 +39,7 @@ public class MovieTest {
 
         // then
         assertThat(resultList).isNotEmpty().hasSize(1);
-        assertThat(resultList).extracting(Movie::getActors).hasSize(3);
+        List<Actor> actors = resultList .get(0).getActors();
+        assertThat(actors).hasSize(3);
     }
 }
