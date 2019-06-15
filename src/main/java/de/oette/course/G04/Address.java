@@ -19,10 +19,16 @@ public class Address {
     private String zipCodeAndCity = RandomStringUtils.randomAlphanumeric(10);
 
 
+    @OneToOne(mappedBy = "address")
+    private Company company;
 
+    public Company getCompany() {
+        return company;
+    }
 
-
-
+    public void setCompany(Company company) {
+        this.company = company;
+    }
 
     @Override
     public String toString() {
