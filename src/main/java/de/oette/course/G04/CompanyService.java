@@ -1,5 +1,7 @@
 package de.oette.course.G04;
 
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
@@ -13,8 +15,14 @@ public class CompanyService {
     private EntityManager entityManager;
 
     @Transactional
+    @EventListener(value = ApplicationReadyEvent.class)
     public void onStartup() {
         createCompaniesAndClients();
+        loadFromDatabase();
+    }
+
+    private void loadFromDatabase() {
+
     }
 
     private void createCompaniesAndClients() {

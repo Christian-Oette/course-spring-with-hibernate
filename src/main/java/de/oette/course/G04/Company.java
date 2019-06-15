@@ -1,16 +1,17 @@
 package de.oette.course.G04;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
 public class Company {
 
     @Id
-    @GeneratedValue
-    private Long id;
+    private Long id = 1L;
 
 
+
+    public Long getId() {
+        return id;
+    }
 }
