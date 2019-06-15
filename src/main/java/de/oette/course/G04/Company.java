@@ -10,11 +10,11 @@ public class Company {
     @Id
     private Long id = 1L;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fk_address")
     private Address address;
 
-    @OneToMany(mappedBy = "company", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "company", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     private List<Client> clients = new ArrayList<>();
 
     public Address getAddress() {

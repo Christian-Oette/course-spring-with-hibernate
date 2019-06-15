@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.transaction.Transactional;
 
 @Component
@@ -29,10 +30,19 @@ public class CompanyService {
     }
 
     private void createCompaniesAndClients() {
-        Client client = new Client();
         Company company = new Company();
         entityManager.persist(company);
 
+        createClient(company);
+        createClient(company);
+        createClient(company);
+        createClient(company);
+        createClient(company);
+        createClient(company);
+    }
+
+    private void createClient(Company company) {
+        Client client = new Client();
         company.addClient(client);
         client.setCompany(company);
     }
