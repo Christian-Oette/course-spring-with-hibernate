@@ -1,5 +1,7 @@
 package de.oette.course.G04;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +15,7 @@ public class Client {
     private Long id;
 
     @Column(name = "client_number")
-    private String clientNumber;
+    private String clientNumber = RandomStringUtils.random(5, false, true);
 
     private Company company;
 
