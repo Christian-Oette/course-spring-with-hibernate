@@ -24,16 +24,16 @@ public class CompanyService {
     }
 
     private void loadFromDatabase() {
-        Address address = entityManager.find(Address.class, 1L);
-        System.out.println(address.getCompany().getId());
+        Company company = entityManager.find(Company.class, 1L);
+        company.getClients().forEach(System.out::println);
     }
 
     private void createCompaniesAndClients() {
-        Address address = new Address();
-        entityManager.persist(address);
-
+        Client client = new Client();
         Company company = new Company();
-        company.setAddress(address);
         entityManager.persist(company);
+
+        company.addClient(client);
+        client.setCompany(company);
     }
 }
