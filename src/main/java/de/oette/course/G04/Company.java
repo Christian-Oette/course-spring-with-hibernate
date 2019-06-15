@@ -12,9 +12,5 @@ public class Company {
     @GeneratedValue
     private Long id;
 
-    private List<Client> clients;
 
-    public List<Client> getClients() {
-        return clients;
-    }
 }

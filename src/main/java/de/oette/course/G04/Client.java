@@ -17,13 +17,5 @@ public class Client {
     @Column(name = "client_number")
     private String clientNumber = RandomStringUtils.random(5, false, true);
 
-    private Company company;
 
-    public Company getCompany() {
-        return company;
-    }
-
-    public void setCompany(Company company) {
-        this.company = company;
-    }
 }
