@@ -1,6 +1,5 @@
 package de.oette.course.C03;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +16,6 @@ public class ListEntitiesController {
 
     @GetMapping
     public List<C03Entity> getList() {
-        listEntityService.createEntities();
         return listEntityService.getList();
     }
 }

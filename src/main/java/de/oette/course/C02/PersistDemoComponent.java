@@ -6,9 +6,6 @@ import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.metamodel.EntityType;
-import javax.transaction.Transactional;
-import java.util.Set;
 
 @Component
 public class PersistDemoComponent {
@@ -16,12 +13,8 @@ public class PersistDemoComponent {
     @PersistenceContext
     private EntityManager entityManager;
 
-    private int count = 1;
+    @EventListener(value = ApplicationReadyEvent.class)
+    public void onStartup() {
 
-    @Transactional
-    public void peristEntity() {
-        entityManager.persist(new DemoEntityWithName());
-        if (count % 3 == 0) throw new RuntimeException("BOOM");
-        count++;
     }
 }

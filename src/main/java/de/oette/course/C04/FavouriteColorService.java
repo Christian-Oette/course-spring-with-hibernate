@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,12 +16,12 @@ public class FavouriteColorService {
 
     @Transactional
     public void storeColor(String colorName) {
-        entityManager.persist(new FavouriteColor(colorName));
+        // TODO Implement me!
     }
 
     @Transactional
     public List<FavouriteColor> loadColors() {
-        TypedQuery<FavouriteColor> query = entityManager.createQuery("select color from FavouriteColor color", FavouriteColor.class);
-        return query.getResultList();
+        // TODO Implement me!
+        return new ArrayList<>();
     }
 }
