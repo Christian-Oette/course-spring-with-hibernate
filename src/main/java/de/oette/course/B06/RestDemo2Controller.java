@@ -9,32 +9,23 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class RestDemo2Controller {
 
-    private Data temp = new Data();
+    private String temp = "";
 
     @GetMapping
-    public Data get() {
+    public String get() {
         return temp;
     }
 
     @PostMapping
-    public Data set(@RequestBody Data newData) {
-        temp = newData;
-        return temp;
-    }
-
     @PutMapping
-    public Data add(@RequestBody Data newData) {
-        temp.text += newData.text;
+    public String set(@RequestParam String newText) {
+        temp += newText;
         return temp;
     }
 
     @DeleteMapping
-    public Data delete() {
-        this.temp = new Data();
+    public String delete() {
+        this.temp = "";
         return temp;
-    }
-
-    public static class Data {
-        public String text;
     }
 }
