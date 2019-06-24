@@ -2,7 +2,10 @@ package de.oette.course.G04;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class Client {
@@ -14,11 +17,4 @@ public class Client {
     @Column(name = "client_number")
     private String clientNumber = RandomStringUtils.random(5, false, true);
 
-    @ManyToOne
-    @JoinColumn(name = "fk_company")
-    private Company company;
-
-    public void setCompany(Company company) {
-        this.company = company;
-    }
 }
