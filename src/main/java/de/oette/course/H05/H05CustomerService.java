@@ -1,13 +1,14 @@
-package de.oette.course.H06;
+package de.oette.course.H05;
 
-/**
- * Do not change this class!
- */
-public class HxxCustomerService {
+import org.springframework.stereotype.Service;
 
-    private final HxxEmailService emailService;
 
-    public HxxCustomerService(HxxEmailService messageSender) {
+@Service
+public class H05CustomerService {
+
+    private final H05EmailService emailService;
+
+    public H05CustomerService(H05EmailService messageSender) {
         this.emailService = messageSender;
     }
 

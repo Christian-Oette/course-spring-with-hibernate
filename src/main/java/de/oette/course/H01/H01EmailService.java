@@ -1,8 +1,8 @@
 package de.oette.course.H01;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class H01EmailService {
 
 
