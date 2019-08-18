@@ -1,5 +1,6 @@
 package de.oette.course.H05;
 
+import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 
 
@@ -17,8 +18,9 @@ public class H05CustomerService {
     }
 
 
-    public void receiveCustomerResponse(String receiver, String text) {
-        responseListener.responseResponseReceived(receiver, text);
+    @EventListener(IncomingMessageEvent.class)
+    public void receiveCustomerResponse(IncomingMessageEvent event) {
+        responseListener.responseResponseReceived(event.getReceiver(), event.getText());
     }
 
 

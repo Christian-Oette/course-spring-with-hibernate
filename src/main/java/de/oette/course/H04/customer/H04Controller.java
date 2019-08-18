@@ -20,6 +20,6 @@ public class H04Controller {
 
     @PostMapping("/create-customer")
     public void createCustomer() {
-
+        customerService.createCustomer();
     }
 }
