@@ -1,7 +1,10 @@
-package de.oette.course.H06;
+package de.oette.course.H05;
 
 
-public class HxxEmailService {
+import org.springframework.stereotype.Service;
+
+@Service
+public class H05EmailService {
 
     public void sendOutgoingMessage(String sender, String text) {
         System.out.println(String.format(
