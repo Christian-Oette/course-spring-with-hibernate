@@ -1,5 +1,6 @@
 package de.oette.course.H03;
 
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,8 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class H03Controller {
 
+    private final ApplicationEventPublisher applicationEventPublisher;
+
+    public H03Controller(ApplicationEventPublisher applicationEventPublisher) {
+        this.applicationEventPublisher = applicationEventPublisher;
+    }
+
     @PostMapping("/trigger-event")
     public void triggerEvent() {
-
+        applicationEventPublisher.publishEvent(new TaskCompletedEvent(this, "Task 21"));
     }
 }
