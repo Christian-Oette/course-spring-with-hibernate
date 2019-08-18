@@ -12,7 +12,9 @@ public class H01CustomerService {
     }
 
     public void sendNotification() {
-
+        // ...
+        emailService.sendOutgoingMessage("Tom", "Message");
+        // ...
     }
 
 
