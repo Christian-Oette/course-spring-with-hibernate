@@ -10,7 +10,7 @@
     </parent>
     <groupId>de.christian-oette</groupId>
     <artifactId>course-spring-and-hibernate</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>spring and hibernate</name>
     <description>Course material</description>
 
