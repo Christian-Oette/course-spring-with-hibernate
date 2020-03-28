@@ -19,7 +19,7 @@ public class PrototypeBeanTest {
     private ApplicationContext applicationContext;
 
     @Test
-    void test() {
+    void testPrototypeScope() {
 
     }
 
