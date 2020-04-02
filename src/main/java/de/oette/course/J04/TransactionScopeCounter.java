@@ -1,4 +1,4 @@
-package de.oette.course.J03;
+package de.oette.course.J04;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

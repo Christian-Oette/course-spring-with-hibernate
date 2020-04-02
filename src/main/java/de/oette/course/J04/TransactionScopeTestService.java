@@ -1,4 +1,4 @@
-package de.oette.course.J03;
+package de.oette.course.J04;
 
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
