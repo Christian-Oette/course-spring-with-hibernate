@@ -6,7 +6,6 @@ class J03ProxyTest {
 
     @Test
     void testWrapComponentInProxy() {
-        J03Component component = new J03Component();
-        component.loadFlag();
+
     }
 }
