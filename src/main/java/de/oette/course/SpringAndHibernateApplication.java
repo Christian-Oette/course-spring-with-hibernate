@@ -6,10 +6,10 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SuppressWarnings("SpellCheckingInspection")
 @SpringBootApplication
-@ComponentScan(basePackages = "de.oette.course.A01")
+@ComponentScan(basePackages = "de.oette.course.A03.sub1")
 public class SpringAndHibernateApplication {
 
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		SpringApplication.run(SpringAndHibernateApplication.class, args);
 	}
 

@@ -7,6 +7,9 @@ class OnlyUnitTest {
 
     @Test
     void testWithoutSpring()  {
+      final SubService subService = new SubService();
+      final MainService mainService = new MainService(subService);
 
+      mainService.logMessage();
     }
 }
